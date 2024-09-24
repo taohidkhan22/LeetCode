@@ -1,42 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 void displayString(string &s1, string &s2){
-    vector<string> v1,v2;int j=0,k=0;
-    for(int i=0;i<s1.size();i++)
-    {
-        v2.push_back(string(1,s1[i]));
-    }
-    for(int i=0;i <s1.size();i++)
-    {
-        for(j=k;j<s2.size();j++)
+    int j=0;
+    for(int i=0;i<s2.size() and j<s1.size();i++){
+        if(s1[j]==s2[i])
         {
-            if(s1[i]==s2[j])
-            {
-                v1.push_back(string(1,s1[i]));
-                k=j+1;
-                cout<<"The if: "<<endl;
-                cout<<"the value of i: "<<i<<endl;
-                cout<<"the value of j: "<<j<<endl;
-                cout<<"the value of k: "<<k<<endl;
-                break;
-            }
-            // else
-            // {
-            //     cout<<"The else: "<<endl;
-            //     cout<<"the value of i: "<<i<<endl;
-            //     cout<<"the value of j: "<<j<<endl;
-            // }
-            
-            
+            j++;
         }
-        
     }
-    for(int i=0;i<v1.size();i++)
-    {
-        cout<<v1[i]<<endl;
-    }
+  
  
-    if(v1==v2){
+    if(j==s1.size()){
         cout<<"true"<<endl;
     }
     else{
