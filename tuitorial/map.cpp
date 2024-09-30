@@ -12,25 +12,25 @@ int main()
       m.insert(pair<char, int> (a,b));
    }
    cout<<m[ch]<<endl;
-  //  map<char, int>:: iterator i;
+   map<char, int>:: iterator i;
    
-  //  cout<<"Output of the problem : "<<endl;
-  //  int a=0;char ch;
-  //  for(i=m.begin();i!=m.end();i++)
-  //  { 
-  //   if(i->second > a)
-  //   { 
-  //     a= i->second;
-  //     ch= i->first;
+   cout<<"Output of the problem : "<<endl;
+   int a=0;
+   for(i=m.begin();i!=m.end();i++)
+   { 
+    if(i->second > a)
+    { 
+      a= i->second;
+      ch= i->first;
       
-  //   }
+    }
 
     
-  //  }
-  //  cout<<a<<"........."<<ch<<endl;
-  //  cout<<m[a]<<endl;
+   }
+   cout<<a<<"........."<<ch<<endl;
+   cout<<m[a]<<endl;
      
-  //   cout<< m.size()<<endl;
+    cout<< m.size()<<endl;
    
    
 }

@@ -8,15 +8,16 @@ int main()
     getline(cin, s1);
     getline(cin, s2);
 
-    unordered_map<char, char> mp;
-    
+    vector<pair<char, char>> mp;
+
     for (int i = 0; i < s1.size(); i++)
     {
-        mp.insert(pair<char, char>(s1[i], s2[i]));
+        mp.push_back(pair<char, char>(s1[i], s2[i]));
+       
     }
-
     for (auto i : mp)
-    {
-        cout << i.first << " " << i.second << endl;
-    }
+        {
+            cout << i.first << " " << i.second << endl;
+        }
 }
+ 
