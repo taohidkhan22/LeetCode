@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/codeblocks/LeetCode",
-      "program": "d:/codeblocks/LeetCode/build/Debug/outDebug",
+      "cwd": "d:/codeblocks/LeetCode/sliding window",
+      "program": "d:/codeblocks/LeetCode/sliding window/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
