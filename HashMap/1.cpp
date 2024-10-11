@@ -1,3 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    Solution s;
+    vector<int> v;
+
+    s.twoSum(v={2,5,3}, 3);
+}
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
