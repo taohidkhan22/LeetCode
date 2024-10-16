@@ -1,23 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int a[]={1,1,5,4,4,6,1,6,5},c=0;
+int main() {
+   string s1,s2;
+   getline(cin,s1);
+   vector<string>v;
+   stringstream p(s1);
+   while (p>>s2)
+   {
+       v.push_back(s2);
+   }
+   for(int i=0;i<v.size();i++){
+    cout<<"v["<<i<<"]--"<<v[i]<<endl;
+   }
 
-    int j= sizeof(a)/sizeof(a[0]);
-    int hashh[10000000]={0};
-   
-    for(int i=0;i<j;i++){
-         
-          hashh[a[i]]+=1;
-    }
-    for(int i=0;i<j;i++){
-        if(hashh[i]>0){
-            c+=1;
-            cout<<i<<"'s frequency is : "<<hashh[i]<<endl;
-        }
-    }
-    cout<<"The number of unique value is: "<<c<<endl;
-
-    
 }
