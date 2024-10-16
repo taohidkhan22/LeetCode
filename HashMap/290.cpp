@@ -47,7 +47,5 @@ int main()
         
         cout <<i.first<<" - "<<i.second<< endl;
     }
-    // for(int i=0;i<pattern.size();i++){
-    //     if()
-    // }
+  
 }
