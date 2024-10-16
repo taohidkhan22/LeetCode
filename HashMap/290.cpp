@@ -21,41 +21,33 @@ int main()
     vector<string>pickSentence;
     map<string, int >pk;
 
-    //Extracting the sentence and map to zero
-    for (int i = 0; i < p.length(); i++)
-    {
-        if (p[i] == ' ')
-        {
+   // Extracting the sentence and map to zero
+        for (int i = 0; i < p.length(); i++) {
+            if (p[i] == ' ') {
 
-            pk[s1]=0;
-            pickSentence.push_back(s1);
-           // pk.insert(pair<string, int>(s1, 0));
-            // pk.push_back(s1);
-            s1.clear();
-            
-        }
-        else
-        {
-            
+                pk[s1] = 0;
+                pickSentence.push_back(s1);
+                // pk.insert(pair<string, int>(s1, 0));
+                // pk.push_back(s1);
+                s1.clear();
 
-            s1 += p[i];
-         
+            } else {
+
+                s1 += p[i];
+            }
         }
+        pk[s1] = 0;
+        pickSentence.push_back(s1);
+        if(pattern.size()!=  pickSentence.size()){
+            return false;
+        }
+        for (int i = 0; i < pattern.size(); i++) {
+            if (h[pattern[i]] != pk[pickSentence[i]]) {
+                return false;
+            }
+            h[pattern[i]] = i + 1;
+            pk[pickSentence[i]] = i + 1;
+        }
+        return true;
     }
-      pk[s1]=0;
-      pickSentence.push_back(s1);
-    // pk.push_back(s1);
-   // pk.insert(pair<string, int>(s1, 0));
-      for(int i=0;i<pattern.size();i++){
-        if(h[pattern[i]]!= pk[pickSentence[i]]){
-            cout<<"false"<<endl;
-            break;
-        }
-        h[pattern[i]]=i+1;
-        pk[pickSentence[i]]=i+1;
-
-
-      }
-    
-  
 }
