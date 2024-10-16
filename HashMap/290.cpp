@@ -12,19 +12,23 @@ int main()
 
     string s1 = "", p,pattern, f;
     int j = 0;
-   // getline(cin, pattern);
+    getline(cin, pattern);
     getline(cin, p);
-
-    // vector<string> pk;
+   
+    
+    
     int h[256]={0};
+    vector<string>pickSentence;
     map<string, int >pk;
 
+    //Extracting the sentence and map to zero
     for (int i = 0; i < p.length(); i++)
     {
         if (p[i] == ' ')
         {
 
             pk[s1]=0;
+            pickSentence.push_back(s1);
            // pk.insert(pair<string, int>(s1, 0));
             // pk.push_back(s1);
             s1.clear();
@@ -38,14 +42,20 @@ int main()
          
         }
     }
-     pk[s1]=0;
+      pk[s1]=0;
+      pickSentence.push_back(s1);
     // pk.push_back(s1);
    // pk.insert(pair<string, int>(s1, 0));
-    cout << "the sentence: " << endl;
-    for (auto i: pk)
-    {
-        
-        cout <<i.first<<" - "<<i.second<< endl;
-    }
+      for(int i=0;i<pattern.size();i++){
+        if(h[pattern[i]]!= pk[pickSentence[i]]){
+            cout<<"false"<<endl;
+            break;
+        }
+        h[pattern[i]]=i+1;
+        pk[pickSentence[i]]=i+1;
+
+
+      }
+    
   
 }
