@@ -9,6 +9,7 @@ public:
         int hash[256] = {0};
         for (int i = 0; i < s.size(); i++)
         {
+            s[i]= tolower(s[i]);
             hash[s[i]]++;
         }
 
