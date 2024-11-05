@@ -1,19 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
-void binarySearch(int arr[])
+vector<int> binarySearch(vector<int> &arr)
 {
-    int d = sizeof(arr) / sizeof(arr[0]);
-    for (int i = 0; i < d; i++)
+    // sort(arr.begin(),arr.end());
+    int h = arr.size() - 1, l = 0, mid, flag = 1;
+    while (l < h)
     {
-        cout << arr[i] << endl;
+        swap(arr[l], arr[h]);
+        l++;
+        h--;
     }
+    return arr;
 }
 int main()
 {
-    int arr[50], key;
+    int key;
+    vector<int> arr;
     for (int i = 0; i < 5; i++)
     {
-        cin >> arr[i];
+        int a;
+        cin >> a;
+        arr.push_back(a);
     }
-    binarySearch(&arr);
+    cout << "inital arraY: " << endl;
+    for (auto i : arr)
+    {
+        cout << arr[i] << endl;
+    }
+
+    arr = binarySearch(arr);
+    cout << "Reverse arraY: " << endl;
+    for (auto i : arr)
+    {
+        cout << arr[i] << endl;
+    }
 }
