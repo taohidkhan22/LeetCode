@@ -1,37 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
-vector<int> binarySearch(vector<int> &arr)
+void gcd(int  &a,int &b)
 {
-    // sort(arr.begin(),arr.end());
-    int h = arr.size() - 1, l = 0;
-    while (l < h)
-    {
-        swap(arr[l], arr[h]);
-        l++;
-        h--;
+    int r, t1=a,t2=b;
+    while(r!=0){
+         r=a%b;
+         a=b;
+         b=r;
     }
-    return arr;
+    cout<<a<<endl;
+    cout<<"LCM: "<<(t1*t2)/a<<endl;
+   
+   
 }
 int main()
 {
-
-    vector<int> arr;
-    for (int i = 0; i < 5; i++)
-    {
-        int a;
-        cin >> a;
-        arr.push_back(a);
-    }
-    cout << "inital arraY: " << endl;
-    for (int i : arr)
-    {
-        cout << i<<" ";
-    }
-
-    arr = binarySearch(arr);
-    cout<<endl << "Reverse arraY: " << endl;
-    for (int i : arr)
-    {
-        cout << i<< " ";
-    }
+    int a=60, b=12;
+    gcd(a,b);
 }
